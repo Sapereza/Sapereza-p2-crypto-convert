@@ -37,7 +37,7 @@
               </svg></button>
 
             <form id="currencyName">
-                <select name="usdCurrency" id="usdMoney" class="w-80 p-2 shadow-inner rounded-sm">
+                <select name="usdCurrency" id="money" class="w-80 p-2 shadow-inner rounded-sm">
                     <option value="USD">United States Dollar "$" (USD)</option>
                 </select>
             </form>
@@ -67,7 +67,7 @@
 
     <!--Start: The "Refresh" button and the "Save This Conversion" button-->
     <div class="flex justify-center m-6">
-        <button type="button" class="border rounded-md mr-2 px-2 bg-white" onclick="refresResult()">Refresh</button>
+        <button type="button" class="border rounded-md mr-2 px-2 bg-white" onclick="refreshResult()">Refresh</button>
         <button type="button" class="border rounded-md px-2 bg-white" onclick="saveConversion()">Save This Conversion</button>
     </div>
     
@@ -81,6 +81,6 @@
     </section>
     
 
-
+    <script src="src/cryptocurrency.js"></script>
 </body>
 </html>
