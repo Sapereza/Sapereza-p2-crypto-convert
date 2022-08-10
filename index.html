@@ -19,7 +19,7 @@
     <!--Start: User input for number value for USD or BTC-->
     <section class="bg-sectionBg p-4 mx-6 rounded-md">
         <div class="m-4">
-            <input type="number" name="currency" id="userInput" class="rounded-md p-2 w-80">
+            <input type="number" name="currency" onInput="userInput" placeholder="Enter Amount to Convert" class="rounded-md p-2 w-80">
         </div>
     <!--End: User input for number value for USD or BTC-->
 
@@ -27,9 +27,9 @@
 
         <div class="m-4 flex justify-left">  
             <form id="bitcoinName">
-                <select name="cryptoCurrency" id="crypto" class="w-80 p-2 shadow-inner rounded-sm">
-                    <option value="BTC" id="cryptoBtc">Bitcoin (BTC)</option>
-                    <option value="ETH" id="cryptoEth">Ethereum (ETH)</option>
+                <select name="cryptoCurrency" id="cryptoType" class="w-80 p-2 shadow-inner rounded-sm">
+                    <option value="Bitcoin (BTC)" id="bitCoin">Bitcoin (BTC)</option>
+                    <option value="Ethereum (ETH)" id="bitEthereum">Ethereum (ETH)</option>
                 </select>
             </form>
 
@@ -39,7 +39,8 @@
 
             <form id="currencyName">
                 <select name="usdCurrency" id="money" class="w-80 p-2 shadow-inner rounded-sm">
-                    <option value="USD" id="moneyUsd">United States Dollar "$" (USD)</option>
+                    <option value="United States Dollar (USD)" id="moneyUsd">United States Dollar "$" (USD)</option>
+                    <option value="Argentine Peso (ARS)" id="nameOfWorldCurrency2">Argentine Peso "ARS" (ARS)</option>
                 </select>
             </form>
         </div>
@@ -48,8 +49,8 @@
     <!--Start: Results area-->
     <!--The Results area needs work, it needs the following: "10 Bitcoin (BTC) = 239,229 United States Dollar "$" (USD)"-->
         <div class="flex justify-center">
-            <output name="inputFromUser" id="inputFromUser" class="mx-2">1</output>
-            <output name="nameOfBitcoin" id="nameOfBitcoin">bitcoin (BTC)</output>
+            <output name="inputFromUser" id="inputFromUser" class="mx-2"></output>
+            <output name="nameOfBitcoin" id="nameOfBitcoin"></output>
 
             <div>
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 m-2 mx-6" viewBox="0 0 20 20" fill="currentColor">
@@ -58,7 +59,7 @@
             </div>
 
             <output name="result" id="result" class="font-bold mx-2">23,134.28</output>
-            <output name="nameOfWorldCurrency" id="nameOfWorldCurrency">United States Dollar "$" (USD)</output>
+            <output name="nameOfWorldCurrency" value="United States Dollar(USD)" id="nameOfWorldCurrency"></output>
 
         </div>
     <!--End: Results area-->
